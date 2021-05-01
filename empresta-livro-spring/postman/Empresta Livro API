@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "03ec76c3-91cb-44c4-9ff0-1a0c5b3a4cbb",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Thays\",\r\n\t\"dataNascimento\" : \"14-12-1989\",\r\n\t\"endereco\" : \"Rua das Flores\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Itamar Vieira Junior\",\r\n\t\"autor\" : \"Torto Arado\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/livro",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"livro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Emprestimo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\" : {\r\n        \"codigoUsuario\": 1\r\n    },\r\n    \"livro\" : {\r\n        \"codigoLivro\": 2\r\n    },\r\n\t\"dataEmprestimo\" : \"2021-04-30\",\r\n\t\"dataDevolucao\" : \"2021-05-30\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emprestimo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emprestimo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
